@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <svg width="120" height="40" viewBox="0 0 120 40">
+                <text x="10" y="30" fill="#333">LOGO</text>
+            </svg>
+        </div>
+        
+        <ul class="navbar__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <div class="navbar__icons">
+            <i data-feather="search"></i>
+            <i data-feather="user"></i>
+        </div>
+
+        <button class="navbar__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1>Hello World</h1>
+            <p>Welcome to our amazing platform.<br>
+               Discover the possibilities with us.</p>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
