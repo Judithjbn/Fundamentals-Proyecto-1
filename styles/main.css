@@ -46,19 +46,36 @@ ul {
     top: 70px;
     left: 0;
     width: 100%;
+    height: auto;
     background: #ffffff;
     flex-direction: column;
     padding: 2rem;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .navbar__links li {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .navbar__links li a {
+    display: block;
+    width: 100%;
+  }
+  .navbar__links li a:hover {
+    color: #007bff;
   }
   .navbar__links.active {
-    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
 .navbar__icons {
   display: flex;
   gap: 1rem;
+  z-index: 1001;
 }
 .navbar__icons svg {
   width: 20px;
@@ -71,6 +88,7 @@ ul {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  z-index: 1001;
 }
 @media screen and (max-width: 768px) {
   .navbar__hamburger {

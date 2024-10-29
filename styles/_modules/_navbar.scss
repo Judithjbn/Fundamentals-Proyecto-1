@@ -25,14 +25,33 @@
             top: 70px;
             left: 0;
             width: 100%;
+            height: auto;
             background: $white;
             flex-direction: column;
             padding: $spacing-lg;
-            transform: translateY(-100%);
-            transition: transform 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+            li {
+                padding: $spacing-md 0;
+                text-align: center;
+                
+                a {
+                    display: block;
+                    width: 100%;
+                    
+                    &:hover {
+                        color: $accent-color;
+                    }
+                }
+            }
 
             &.active {
-                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
             }
         }
     }
@@ -40,6 +59,7 @@
     &__icons {
         display: flex;
         gap: $spacing-md;
+        z-index: 1001;
         
         svg {
             width: 20px;
@@ -54,6 +74,7 @@
         border: none;
         cursor: pointer;
         padding: $spacing-sm;
+        z-index: 1001;
 
         @include respond-to($mobile) {
             display: block;
