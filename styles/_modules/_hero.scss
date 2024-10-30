@@ -1,16 +1,16 @@
 .hero {
     height: 50vh;
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                      url('../assets/hero-bg.svg');
+                      url('../assets/hero.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: top;
     margin-top: 70px;
 
     &__content {
-        text-align: center;
+        text-align: left;
         color: $white;
         padding: $spacing-lg;
 
