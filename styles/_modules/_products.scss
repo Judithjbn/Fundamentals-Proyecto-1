@@ -4,13 +4,19 @@
 
     &__container {
         @include container;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-lg * 2;
+
+        @include respond-to($mobile) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__card {
         background-color: #E8E8E8;
         border-radius: 20px;
         padding: $spacing-lg * 2;
-        max-width: 400px;
         transition: transform 0.3s ease;
 
         &:hover {
