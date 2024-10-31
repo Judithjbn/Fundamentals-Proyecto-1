@@ -1,5 +1,6 @@
 .features {
     padding: $spacing-lg * 2;
+    background-color: #f5f5f5;
 
     &__container {
         @include container;
@@ -24,7 +25,7 @@
     }
 
     &__card {
-        background-color: #D9D9D9;
+        background-color: #E8E8E8;
         border-radius: 20px;
         padding: $spacing-lg * 2;
         min-width: 300px;
