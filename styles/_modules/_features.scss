@@ -5,71 +5,61 @@
     &__container {
         @include container;
         display: flex;
-        gap: $spacing-lg * 2;  // Increased gap between cards
+        gap: $spacing-lg * 2;
         overflow-x: auto;
-        padding: $spacing-lg * 2;  // Increased padding
+        padding-bottom: $spacing-lg;
         scrollbar-width: thin;
-        scroll-behavior: smooth;
         
         &::-webkit-scrollbar {
-            height: 8px;  // Slightly larger scrollbar
+            height: 6px;
         }
         
         &::-webkit-scrollbar-track {
             background: #f1f1f1;
-            border-radius: 4px;
         }
         
         &::-webkit-scrollbar-thumb {
             background: $accent-color;
-            border-radius: 4px;
+            border-radius: 3px;
         }
     }
 
     &__card {
         background-color: #E8E8E8;
         border-radius: 20px;
-        padding: $spacing-lg * 2;  // Match products card padding
-        min-width: 350px;  // Slightly wider cards
-        max-width: 400px;  // Match products card max-width
+        padding: $spacing-lg * 2;
+        min-width: 300px;
         flex: 0 0 auto;
-        transition: all 0.3s ease;
-        
+        transition: transform 0.3s ease;
+
         &:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
     }
 
     &__card-content {
         display: flex;
         flex-direction: column;
-        gap: $spacing-lg;  // Match products card gap
+        gap: $spacing-lg;
     }
 
     &__category {
-        font-size: 1.2rem;  // Match products card font size
+        font-size: 1.5rem;
         color: $primary-color;
         font-weight: bold;
-        margin-bottom: $spacing-md;
     }
 
     &__image {
         width: 100%;
-        height: 200px;  // Fixed height for consistent sizing
-        border-radius: 10px;
+        height: 200px;
         overflow: hidden;
+        border-radius: 10px;
         margin: $spacing-lg 0;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
-
-            &:hover {
-                transform: scale(1.05);
-            }
         }
     }
 
@@ -81,16 +71,10 @@
         cursor: pointer;
         font-weight: 500;
         text-align: center;
-        transition: all 0.3s ease;
-        display: inline-block;
-        margin-top: $spacing-md;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: $accent-color;
-            color: $white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            background-color: darken($white, 5%);
         }
     }
 }

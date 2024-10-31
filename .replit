@@ -28,6 +28,7 @@ task = "packager.installForAll"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npx sass --watch styles/main.scss:styles/main.css & npx live-server --port=8000 --no-browser"
+waitForPort = 8000
 
 [deployment]
 run = ["sh", "-c", "npx sass --watch styles/main.scss:styles/main.css & npx live-server --port=8000 --no-browser"]
